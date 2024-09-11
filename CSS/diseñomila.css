@@ -78,12 +78,6 @@ body {
   background-color: #e64a19;
 }
 
-.aside {
-  display: flex;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
 /* Estilos principales */
 .main {
   grid-area: main;
@@ -142,7 +136,7 @@ body {
 .contenedor__carta .btn:hover {
   background-color: #e64a19;
 }
-.contenedor__carta.milanesa-mas-pedida {
+.milanesa-mas-pedida {
   border: 2px solid #ff5722;
   background-color: #ffe0b2;
   transform: scale(1.1);
@@ -233,7 +227,7 @@ form button {
   transition: background-color 0.3s ease;
   font-family: "Roboto Condensed", sans-serif;
 }
-form button:hover {
+form .button:hover {
   background-color: #e64a19;
 }
 
