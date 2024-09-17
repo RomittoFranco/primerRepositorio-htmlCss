@@ -41,7 +41,7 @@ body {
   border: 10px solid transparent;
   padding: 10px;
   border-radius: 50px;
-  background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), linear-gradient(to right, rgb(253, 138, 7), rgb(14, 15, 14));
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), linear-gradient(to right, rgb(253, 138, 7), rgb(0, 0, 0));
   background-origin: border-box;
   background-clip: padding-box, border-box;
   max-width: 100%;
@@ -64,18 +64,18 @@ body {
 }
 .nav-options .nav-btn {
   padding: 0.5rem 1rem;
-  background-color: #ff8a65;
+  background-color: #e0582e;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
   font-weight: 700;
-  border: 1px solid #fff;
+  border: 1px solid #000000;
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
 }
 .nav-options .nav-btn:hover {
-  background-color: #e64a19;
+  background-color: #e02626;
 }
 
 /* Estilos principales */
@@ -134,8 +134,9 @@ body {
   text-transform: uppercase;
 }
 .contenedor__carta .btn:hover {
-  background-color: #e64a19;
+  background-color: #e02626;
 }
+
 .milanesa-mas-pedida {
   border: 2px solid #ff5722;
   background-color: #ffe0b2;
@@ -227,8 +228,8 @@ form button {
   transition: background-color 0.3s ease;
   font-family: "Roboto Condensed", sans-serif;
 }
-form .button:hover {
-  background-color: #e64a19;
+form button:hover {
+  background-color: #e02626;
 }
 
 /* Estilos específicos para el apartado de calidad */
@@ -276,25 +277,22 @@ form .button:hover {
   border-radius: 4px;
   padding: 1rem;
 }
-.maindos .subrayado-con-espacio {
+
+.subrayado-con-espacio {
   text-decoration: underline;
   text-underline-offset: 7px;
   text-decoration-thickness: 2px;
   text-decoration-color: #ff5100;
 }
 
+/* Variables para colores y tamaños */
 /* Responsive */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-  }
-  .header .contenedor__titulo .titulo {
-    font-size: 2rem;
-    padding: 5px;
-    border-radius: 20px;
-    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), linear-gradient(to right, rgb(253, 138, 7), rgb(14, 15, 14));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
   }
   .main {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -306,12 +304,35 @@ form .button:hover {
     width: 100%;
     text-align: center;
   }
+  .titulo {
+    font-size: 2rem;
+    padding: 5px;
+    border-radius: 20px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), linear-gradient(to right, rgb(253, 138, 7), rgb(14, 15, 14));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  .contenedor__logo img {
+    width: 120px;
+    height: 120px;
+  }
+  .nav-options {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-btn {
+    width: 90%;
+    text-align: center;
+  }
 }
+/* Estilo responsive adicional para pantallas pequeñas */
 @media (max-width: 480px) {
   .titulo {
     font-size: 1.5rem;
     padding: 5px;
     border-radius: 15px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), linear-gradient(to right, rgb(253, 138, 7), rgb(14, 15, 14));
   }
   .contenedor__logo img {
     width: 100px;
