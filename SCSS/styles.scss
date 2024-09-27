@@ -102,15 +102,30 @@ body {
     }
 }
 
+.fondot {
+    background-image: url(/fotos/fondoCaminito.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .fondot2 {
+    background-image: url(/fotos/fondot2.png);
+    background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; 
+      min-height: 100vh; 
+      margin: 0; 
+      padding: 0;
+  }
 
-
-/* Estilos principales */
 .main {
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 1rem;
+    
 }
 
 .article {
@@ -130,7 +145,7 @@ body {
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+    
     &:hover {
         transform: scale(1.05);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -150,10 +165,25 @@ body {
             font-family: $font-secondary;
             font-weight: 700;
         }
+    
     }
 
+    /* Estilos de los precios */
+    .carta__precio {
+    font-size: 1.2em;
+    color: #050505;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f7f3f3; 
+    border: 2px solid #e92a2a;
+    border-radius: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
     .btn {
-        display: inline-block;
+        
         padding: 0.5rem 1rem;
         background-color: $color-primary;
         color: #fff;
@@ -163,9 +193,13 @@ body {
         transition: background-color 0.3s ease;
         font-family: $font-secondary;
         text-transform: uppercase;
-
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
         &:hover {
             background-color: $color-btn-hover;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
     }
 }
@@ -234,59 +268,62 @@ body {
 }
 
 /* Estilos para los formularios */
-form {
+.formulario {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background-color: #000000;
 
-    label {
+    h2{
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .datoform {
+        width: 98%;
+        background-color: #f7efea;
         font-weight: 700;
         margin-bottom: 0.5rem;
         font-family: $font-secondary;
+        border-radius: 4px; 
+        margin-bottom: 16px;
+        padding: 10px;
+        border: 1px solid #e0582e;
+        font-family:'calibri'
+        
     }
-
-    textarea {
-        width: 100%;
-        padding: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 1rem;
-        font-family: $font-primary;
-        box-sizing: border-box;
-
-        &:focus {
-            border-color: $color-primary;
-            outline: none;
-        }
-    }
-
-    button {
-        padding: 0.75rem 1.5rem;
-        background-color: $color-primary;
+    .button{
+        padding: 0.5rem 1rem;
+        background-color: $color-btn;
         color: #fff;
-        border: none;
+        text-decoration: none;
         border-radius: 4px;
-        font-size: 1rem;
-        font-weight: 700;
-        cursor: pointer;
         transition: background-color 0.3s ease;
+        font-weight: 700;
+        border: 1px solid #000000;
         font-family: $font-secondary;
-
+        text-transform: uppercase;
+        width: 100%;
         &:hover {
             background-color: $color-btn-hover;
         }
     }
+    .formy{
+        color:white;
+        text-decoration: none;
+
+    }
 }
 
-/* Estilos específicos para el apartado de calidad */
+
 .maindos {
     padding: 2rem;
-    background-color: #fff;
+    background-color: #000000;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: 2rem auto;
     max-width: 1200px;
+    box-shadow: 7px 13px 37px #000;
 
     .subtitulo {
         font-size: 2.5rem;
@@ -296,36 +333,10 @@ form {
         padding-bottom: 0.5rem;
         font-weight: 700;
     }
-
-    .texto {
-        font-size: 1.1rem;
-        color: $color-text;
-        line-height: 1.8;
-        margin-bottom: 2rem;
-    }
-
-    .seccion {
-        margin-bottom: 2.5rem;
-    }
-
-    .titulo-seccion {
-        font-size: 1.8rem;
-        color: $color-primary;
-        border-bottom: 2px solid $color-primary;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-    }
-
-    .blockquote {
-        border-left: 4px solid $color-primary;
-        padding-left: 1rem;
-        margin: 1.5rem 0;
-        font-style: italic;
-        color: $color-text-blockquote;
-        background-color: $color-blockquote;
-        border-radius: 4px;
-        padding: 1rem;
+    .texto{
+        color: white;
+        font-size: 20px;
+        
     }
 }
 
@@ -336,7 +347,7 @@ form {
     text-decoration-color: $color-link-hover;
 }
 
-/* Variables para colores y tamaños */
+
 $background-gradient: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
                      linear-gradient(to right, rgb(253, 138, 7), rgb(14, 15, 14));
 
@@ -388,7 +399,7 @@ $background-gradient: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
   }
 }
 
-/* Estilo responsive adicional para pantallas pequeñas */
+/* Estilo responsive adicional para pantallas mas pequeñas */
 @media (max-width: 480px) {
   .titulo {
     font-size: 1.5rem;
